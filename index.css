@@ -1,5 +1,4 @@
 body {
-    border: 3px solid gold;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +7,6 @@ body {
 section {
     display: flex;
     flex-direction: column;
-    border: 3px solid rgb(255, 0, 0);
     justify-content: center;  /* Centers the image horizontally */
     align-items: center;      /* Centers the image vertically */
     width: 100%;
@@ -17,7 +15,6 @@ section {
 }
 
 img {
-    border: 3px solid gold;
     max-width: 100%;
     height: auto;
     max-height: 300px; 
