@@ -1,0 +1,30 @@
+body {
+    border: 3px solid gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(255, 0, 0);
+    justify-content: center;  /* Centers the image horizontally */
+    align-items: center;      /* Centers the image vertically */
+    width: 100%;
+    height: 100vh;  
+           /* Makes sure the section takes up full viewport height */
+}
+
+img {
+    border: 3px solid gold;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; 
+    object-fit: cover; 
+}
+
+p {
+    border: 3px solid rgb(38, 0, 255);
+    text-align: center;
+}
