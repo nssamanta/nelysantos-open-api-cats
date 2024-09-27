@@ -1,27 +1,90 @@
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-section {
-    display: flex;
+    margin: 0;
     flex-direction: column;
-    justify-content: center;  /* Centers the image horizontally */
-    align-items: center;      /* Centers the image vertically */
-    width: 100%;
-    height: 100vh;  
-           /* Makes sure the section takes up full viewport height */
+    background-image: url('catpawsyellow.png');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 300px; 
-    object-fit: cover; 
+h1 {
+    display: block;
+    font-size: 3rem;
+    padding: 10px; /* Add padding to give it space */
+    background: transparent; 
+    z-index: 10; /* Ensure it's on top of other content */
+    text-align: center; /* Center the text */
+    margin: 20px 0 0;
+    width: 100%; /* Make the header stretch the full width */
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh; /* Make grid occupy full viewport height */
+    column-gap: 20px; /* Adjust spacing between columns */
+    row-gap: 10px; /* Adjust spacing between rows */
+    padding: 0 10px;
+    box-sizing: border-box; /* Prevent padding from adding extra width */
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    width: 300px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    background-color: #f8f9fa;
+    color: black;
+    text-align: center;
+    transform: rotateY(180deg);
+    padding: 0;
+}
+
+h3 {
+    margin: 10px 0;
+    padding: 0;
 }
 
 p {
-    border: 3px solid rgb(38, 0, 255);
-    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 10px;
 }
+
+
